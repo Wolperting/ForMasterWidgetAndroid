@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wolper.formmasterwidget">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_main"
+        android:label="FMWidget"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".ConfigActivity">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_CONFIGURE">
+                </action>
+            </intent-filter>
+        </activity>
+
+
+        <receiver
+            android:name="com.wolper.formmasterwidget.FMHWidget"
+            android:icon="@drawable/icon_main"
+            android:label="FMWidget">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE">
+                </action>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_metadata">
+            </meta-data>
+        </receiver>
+
+    </application>
+
+</manifest>

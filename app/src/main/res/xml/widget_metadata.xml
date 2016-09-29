@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/activity_fmhwidget"
+    android:minHeight="40dp"
+    android:minWidth="110dp"
+    android:updatePeriodMillis="30000"
+    android:configure="com.wolper.formmasterwidget.ConfigActivity"
+    android:previewImage="@drawable/icon_main"
+    android:resizeMode="horizontal|vertical">
+</appwidget-provider>
